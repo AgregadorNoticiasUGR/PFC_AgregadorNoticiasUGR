@@ -15,7 +15,7 @@
 	
 			//Vista inicial de portada
 			var titulo_portada="<h1>Inicio:</h1>"
-			var vista_portada="<form action=\"\">Usuario: <input type=\"url\" name=\"usuario\" id=\"user\"><br>Contrase&ntilde;a: <input type=\"text\" name=\"password\" id=\"pass\"><br><input type=\"submit\" value=\"Enviar\"></form>";
+			var vista_portada="<form action=\"registro.php\" method=\"post\">Usuario: <input type=\"text\" name=\"usuario\" id=\"user\"><br>Contrase&ntilde;a: <input type=\"password\" name=\"password\" id=\"pass\"><br><input type=\"submit\" value=\"Enviar\"></form>";
 			
 			//Vista del menu de navegación
 			//Se utilizará en todas las vistas excepto en la portada inicial
