@@ -20,11 +20,17 @@
         $totFilas = mysql_num_rows($resultado);
         
         if($totFilas!=1){
-            echo "<p>No se existe ningun usuario registrado con esas caracter&iacute;sticas, compruebe datos introducidos.</p>";
+				
+			echo "<h1>No se existe ningun usuario registrado con esos datos, compruebelos y vuelva a intentarlo.</h1>";
+			echo "<a href=\"index.html\" style=\"text-decoration:none\"><input type=\"button\" value=\"Reintentar\" >";
+			
         }
         else{
-            echo "<p>Acierto!!</p>";
+			header("location:categorias.php");
         }
 	?>
+    
+    
+    
 </body>
 </html>
