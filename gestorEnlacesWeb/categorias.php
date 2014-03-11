@@ -13,17 +13,19 @@
        
 	   
 	   
-	   //Imprimo la plantilla de la estructura básica	
+	   //Imprimo el codigo de la plantilla de  estructura básica de html 
 		
 		
 		echo "<div id=\"contenedor\">
+				<nav id=\"navegador\"></nav>
 				<header id=\"titulo\"></header>
 				<article id=\"contenido\"></article>
-				<nav id=\"navegador\"></nav>
 				<footer id=\"piePagina\"></footer>
 	</div>
 	</br>";
 		
+		
+		//Código javascript del mismo estilo al que se usa en el fichero interface.js
 		
 		echo '<script type="text/javascript">
 				var  tit=  $("#titulo");
@@ -48,7 +50,36 @@
 				}
 				
 				muestra_lista_categorias();
-			</script></br>';
+			</script>';
+			
+			
+			
+			$conexion = mysql_connect("127.0.0.1", "root", "");
+			mysql_select_db("enlaces_ugr_db", $conexion);
+			
+			$sql = "SELECT * FROM `categoria`";
+			$resultado = mysql_query($sql, $conexion)or die(mysql_error());
+			
+			
+			$totFilas = mysql_num_rows($resultado);
+			
+			if($totFilas==0){
+					
+				echo "<h4>No se existe ninguna categor&iacute;a que mostrar.</h4>";
+				
+			}
+			else{
+				
+							
+				echo "<form action=\"enlaces.php\" method=\"post\" id=\"listado_categorias\">";
+				while ($row=mysql_fetch_array($resultado)) 
+				{	
+				
+					echo '<div class="elemento_lista"><input type="submit" value= "'.$row['nom_categoria'].'" name= "categoria"></div> ';
+				}
+				
+				echo "</form>";
+			}
     
     
     ?>

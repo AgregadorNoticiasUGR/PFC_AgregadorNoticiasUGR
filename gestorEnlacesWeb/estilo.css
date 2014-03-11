@@ -58,11 +58,16 @@ body {
 
 	
 #titulo{
-	top:20rem;
+	position:relative;
+	margin-top:15%;
+	margin-left:10%;
 }
 
 #contenido{
-	top:25rem;}
+	position:relative;
+	margin-top:20%;
+	margin-left:25%;
+}
 	
 	
 	
