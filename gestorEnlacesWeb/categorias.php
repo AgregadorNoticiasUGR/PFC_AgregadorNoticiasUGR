@@ -57,11 +57,18 @@
 			$conexion = mysql_connect("127.0.0.1", "root", "");
 			mysql_select_db("enlaces_ugr_db", $conexion);
 			
+			mysql_set_charset('utf8');
+			
 			$sql = "SELECT * FROM `categoria`";
 			$resultado = mysql_query($sql, $conexion)or die(mysql_error());
 			
+			// Cerrar la conexión
+			mysql_close($conexion);
+			
 			
 			$totFilas = mysql_num_rows($resultado);
+			
+			
 			
 			if($totFilas==0){
 					
@@ -81,7 +88,7 @@
 				echo "</form>";
 			}
     
-    
+    		
     ?>
 </body>
 </html>

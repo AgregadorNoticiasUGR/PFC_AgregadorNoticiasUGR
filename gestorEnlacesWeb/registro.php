@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+<meta charset="utf-8">
+<title>Gestor de enlaces</title>
+</head>
 <body>
 
 
@@ -15,6 +20,10 @@
         
         $seleccion = "SELECT * FROM `administrador` WHERE `pass`='$pass' and `user`='$user' ;";
         $resultado = mysql_query($seleccion, $conexion)or die(mysql_error());
+		mysql_set_charset('utf8');
+		
+		// Cerrar la conexión
+		mysql_close($conexion);
         
         
         $totFilas = mysql_num_rows($resultado);
