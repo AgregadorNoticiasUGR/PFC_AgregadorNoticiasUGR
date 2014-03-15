@@ -3,6 +3,11 @@
 <head>
 <meta charset="utf-8">
 <title>Gestor de enlaces</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="interface.js"></script>
+
+<link href="estilo.css" rel="stylesheet" type="text/css">
+</head>
 </head>
 
 <body>
@@ -25,13 +30,12 @@
 		$row=mysql_fetch_array($resultado);
 		$id_categ=$row['cod_categoria'];
 		
-		echo "Estamos con la categoria $id_categ </br>";
 		
 		//Buscamos todos los enlaces relacionados con esta categoria
         $sql = "SELECT `cod_enlace` FROM `pertenece` WHERE `cod_categoria`=$id_categ ";
         $resultado = mysql_query($sql, $conexion)or die(mysql_error());
 		
-		echo "Vamos a ver que enlaces tenemos para la categoria $id_categ </br>";
+		echo "Los enlaces almacenados  para la categoria: $id_categ </br>";
 		
 		
 		
