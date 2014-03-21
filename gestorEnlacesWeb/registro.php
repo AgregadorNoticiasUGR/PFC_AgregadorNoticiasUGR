@@ -7,15 +7,10 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="interface.js"></script>
 
-<link href="estilo.css" rel="stylesheet" type="text/css">
 </head>
-</head>
-<body id="contenido_body">
+<body >
 
-	<script type="text/javascript">
-		var mi_body= ("$contenido_body");
-		mi_body.html(plantilla);
-	</script>
+	
 
 
 	<?php
