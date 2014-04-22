@@ -46,13 +46,27 @@ body {
 	
 }
 
-#estilo_navegador ul li a:hover {
-	color: #00aacc;
+#estilo_navegador li a:hover {
+	background-color:#033;
+	
 }
 
 #estilo_navegador img {
 	height:4rem;
 	width:4rem;
+}
+
+
+#estilo_navegador ul li ul/* Para todos los ul debajo del ul.menu */
+{
+   display:none;
+   list-style:none;
+} 
+
+
+#opciones:hover  ul
+{
+   display:block;
 }
 
 

@@ -19,7 +19,6 @@
 			$(function(){
 					
 					muestra_lista_categorias();
-					localStorage.pag_anterior="registro.php";
 					
 			}); 
 

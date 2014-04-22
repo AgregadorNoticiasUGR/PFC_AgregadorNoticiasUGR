@@ -10,12 +10,10 @@
 <script type="text/javascript">
 
 
-			//Tras presionar el boton de autentificación; en el caso de concordancia se muestra interface inicial para mostrar todas las categorias registradas en el sistema
 			
 			$(function(){
 					
 					muestra_lista_enlaces();
-					localStorage.pag_anterior="categorias.php";
 					
 			}); 
 
@@ -36,7 +34,7 @@
                     
                     $categ = $_POST["categoria"];
                     
-                    echo "Categoria leida en enlaces.php $categ </br>";
+                    echo "<h2>Categoria seleccionada: <em>$categ</em></h2></br>";
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
@@ -53,7 +51,6 @@
                     $sql = "SELECT `cod_enlace` FROM `pertenece` WHERE `cod_categoria`=$id_categ ";
                     $resultado = mysql_query($sql, $conexion)or die(mysql_error());
                     
-                    echo "Los enlaces almacenados  para la categoria: $id_categ </br>";
                     
                     
                     
