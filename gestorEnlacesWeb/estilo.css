@@ -49,6 +49,7 @@ body {
 #estilo_navegador li a:hover {
 	background-color:#033;
 	
+	
 }
 
 #estilo_navegador img {
@@ -57,15 +58,12 @@ body {
 }
 
 
-#estilo_navegador ul li ul/* Para todos los ul debajo del ul.menu */
-{
+#estilo_navegador ul  li ul{
    display:none;
-   list-style:none;
 } 
 
 
-#opciones:hover  ul
-{
+#estilo_navegador ul li:hover  ul  {
    display:block;
 }
 
