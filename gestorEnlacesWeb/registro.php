@@ -1,29 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
 <meta charset="utf-8">
 <title>Gestor de enlaces</title>
-<script type="text/javascript" src="jquery.js"></script>
-<script type="text/javascript" src="interface.js"></script>
-
 </head>
-<body >
 
-	<div id="contenedor">
-    	<header id="titulo"><h1>¡Bienvenido!</h1></header>
-        <article id="contenido">
-            <h3>Esta plataforma sirve para acceder como administrador del servicio de gestión de enlaces, de la aplicación: Agregador de noticias UGR</h3></br>
-            <form action="registro.php" method="post">
-            	Usuario: <input type="text" name="usuario" id="user"><br>
-                Contraseña: <input type="password" name="password" id="pass"><br>
-                <input id="btn_registro" type="submit" value="Enviar">
-            </form>
-	    </article>
-        <nav id="navegador"></nav>
-        <footer id="piePagina"></footer>
-    </div>
-
+<body>
 
 	<?php
         $user = $_POST["usuario"];
@@ -55,8 +37,5 @@
 			header("location:categorias.php");
         }
 	?>
-    
-    
-    
 </body>
 </html>
