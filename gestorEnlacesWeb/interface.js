@@ -45,7 +45,7 @@
 				
 			//	Vista inicial de registro
 			var titulo_registro="<h1>Inicio:</h1>"
-			var vista_registro="<form action=\"registro.php\" method=\"post\">Usuario: <input type=\"text\" name=\"usuario\" id=\"user\"><br>Contrase&ntilde;a: <input type=\"password\" name=\"password\" id=\"pass\"><br><input id=\"btn_registro\" type=\"submit\" value=\"Enviar\"></form>";
+			var vista_registro="";
 				
 				
 				
