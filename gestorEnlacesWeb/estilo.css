@@ -58,14 +58,9 @@ body {
 }
 
 
-#estilo_navegador ul  li ul{
-   display:none;
-} 
 
 
-#estilo_navegador ul li:hover  ul  {
-   display:block;
-}
+
 
 
 	
@@ -81,6 +76,16 @@ body {
 	margin-left:25%;
 }
 	
+	
+	
+.elemento_lista{
+	display: block;
+	position:relative;
+	margin-top:4em;
+	}	
+	
+	
+
 	
 	
 

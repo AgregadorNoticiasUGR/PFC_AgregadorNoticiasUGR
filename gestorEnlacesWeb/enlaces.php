@@ -55,6 +55,7 @@
                     
                     
                     $totFilas = mysql_num_rows($resultado);
+					
                         
                     if($totFilas==0){
                                 
@@ -62,21 +63,22 @@
                             
                     }else{
                         
-                        echo "<form action=\"muestra_enlace.php\" method=\"post\" id=\"listado_enlaces\">";
-                        
+                       
                         while ($row=mysql_fetch_array($resultado)) 
                         {	
                             
                             $id_enlace=$row['cod_enlace'];
+														
                             $sql = "SELECT * FROM `enlace` WHERE `cod_enlace`=$id_enlace";
-                            $resultado = mysql_query($sql, $conexion)or die(mysql_error());
-                            $row=mysql_fetch_array($resultado);
+                            $resultado2 = mysql_query($sql, $conexion)or die(mysql_error());
+                            $row=mysql_fetch_array($resultado2);
                             $text_enlace=$row['descripcion'];
-                            echo "<div class=\"elemento_lista\"><input id=\"btn_enlace\" type=\"submit\" value= $text_enlace name= \"enlace\"></div> ";
+                            $url_enlace=$row['url'];
+                            echo "<div class=\"elemento_lista\">Descripción: <p class=\"descripcion\" >$text_enlace</p>Url:<a href=\"$url_enlace\" class=\"url\">$url_enlace</a></div> ";
                                             
                         }
                         
-                        echo "</form>";
+                        
                     }
                     
                     // Cerrar la conexión
