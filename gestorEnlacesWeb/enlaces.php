@@ -74,15 +74,18 @@
                             $row=mysql_fetch_array($resultado2);
                             $text_enlace=$row['descripcion'];
                             $url_enlace=$row['url'];
+							
                             echo "<div class=\"elemento_lista\">Descripción: <p class=\"descripcion\" >$text_enlace</p>Url:<a href=\"$url_enlace\" class=\"url\">$url_enlace</a></div> ";
+							echo	"<form action=\"editar_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"categoria_seleccionada\" value=$id_categ /><input type=\"hidden\" name=\"enlace_seleccionado\" value=$id_enlace /><input type=\"hidden\" name=\"texto_enlace_seleccionado\" value=$text_enlace /><input type=\"hidden\" name=\"url_enlace_seleccionado\" value=$url_enlace /><input type=\"submit\" value=\"Editar\" /></form>";
                                             
                         }
-                        
+						
+                          // Cerrar la conexión
+                    mysql_close($conexion);
                         
                     }
                     
-                    // Cerrar la conexión
-                    mysql_close($conexion);
+                  
                     
                 ?>
         </article>

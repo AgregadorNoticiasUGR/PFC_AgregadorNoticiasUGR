@@ -19,7 +19,7 @@
 				
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"index.php\" id=\"atras\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\"><img src=\"desconexion-icono.png\"></a></li><li id=\"opciones\" class=\"separador\"><a href=\"#\" ><img src=\"opciones-icono.png\"></a><ul><li class=\"nuevo\"><a href=\"nuevo_categoria.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_categoria.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"index.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li id=\"opciones\"  class=\"separador\"><a href=\"#\" ><img src=\"opciones-icono.png\" title=\"Menú\"></a><ul><li class=\"nuevo\"><a href=\"nuevo_categoria.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_categoria.php\">Editar</a></li></ul></li></ul></div>";
            
 		        
 			//Vista inicial de la lista de categorias 
@@ -75,7 +75,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\"><img src=\"opciones-icono.png\"></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
 	
 		
 				
@@ -84,12 +84,11 @@
 	};
 	
 	
-	//Interface para detallar la informacion del enlace seleccionado
-	//
-	//
-	//
-	function muestra_enlace(){
-		
+	
+	
+		function listar_enlaces_editable(){
+			
+			
 			//Inicialización de variables
 				
 			var  tit=  	$("#titulo");
@@ -98,17 +97,46 @@
 			var  menu= 	$("#navegador");
 				
 			//Vista inicial de la lista de enlaces 
-			var titulo_enlace="<h1>Detalle de enlace:</h1>";
+			var titulo_lista_enlaces="<h1>Lista de enlaces  -- Editar:</h1>";
 			
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"enlaces.php\" id=\"atras\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\"><img src=\"opciones-icono.png\"></a></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
 	
 		
 				
-				tit.html(titulo_enlace);
+				tit.html(titulo_lista_enlaces);
 				menu.html(menu_navegacion);
-	};
+		
+		
+		};
+	
+	
+	
+	function confirmar_enlace(){
 			
-
+			
+			//Inicialización de variables
+				
+			var  tit=  	$("#titulo");
+			var  menu= 	$("#navegador");
+			var  cont= 	$("#contenido");
+			var  menu= 	$("#navegador");
+				
+			//Vista inicial de la lista de enlaces 
+			var titulo_lista_enlaces="<h1>Lista de enlaces  -- Cambios realizados:</h1>";
+			
+			
+			//Vista del menu de navegación
+        	//Se utilizará en todas las vistas excepto en la portada inicial
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+	
+		
+				
+				tit.html(titulo_lista_enlaces);
+				menu.html(menu_navegacion);
+		
+		
+		};
+	
