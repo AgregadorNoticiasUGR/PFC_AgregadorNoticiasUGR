@@ -13,7 +13,7 @@
 			
 			$(function(){
 					
-					listar_enlaces_editable();
+					confirmar_enlace();
 					
 			}); 
 
@@ -27,38 +27,28 @@
 
     <div id="contenedor">
     	<header id="titulo"></header>
-        <article id="contenido"> 
+        <article id="contenido">  
         
         
         <?php
                     
-                    $id_categ = $_POST["categoria_seleccionada"];
-					$id_enlace=$_POST["enlace_seleccionado"];
+                    $id_categ = $_POST["id_categoria"];
+					$id_enlace=$_POST["id_enlace"];
+					$texto_enlace=$_POST["descripcion_editado"];
+					$url_enlace=$_POST["url_editado"];
                     
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
                     mysql_set_charset('utf8');
                     
-                   							
-					$sql = "SELECT * FROM `enlace` WHERE `cod_enlace`=$id_enlace";
-					$resultado2 = mysql_query($sql, $conexion)or die(mysql_error());
-					$row=mysql_fetch_array($resultado2);
-					$texto_enlace=$row['descripcion'];
-					$url_enlace=$row['url'];
-	
-				
-					
-							
-							
-						//	  echo "$id_categ   </br> $id_enlace </br>  $url_enlace </br> $texto_enlace </br> ";
-                            
-									
-							
-					echo	"<form action=\"confirmar_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"id_categoria\" value=\"$id_categ\" /><input type=\"hidden\" name=\"id_enlace\" value=\"$id_enlace\" /> <div class=\"url\">Url:  <input type=\"text\" name=\"url_editado\" value=\"$url_enlace\" /></div><div class=\"descripcion\"> Descripción:  <input type=\"text\" name=\"descripcion_editado\" value=\"$texto_enlace\" /></div><input type=\"submit\" value=\"Guardar\" /></form>";		
-                           
+                   		
+											
+					//$sql = "UPDATE  `enlace` SET  `url`=$url_enlace,`descripcion`=$texto_enlace WHERE `cod_enlace`=$id_enlace";
+					 mysqli_query($conexion, "UPDATE  `enlace` SET  `url`=$url_enlace,`descripcion`=$texto_enlace WHERE `cod_enlace`=$id_enlace") ;
+			
 														
-                    
+                    echo "El enlace: $id_enlace, se ha modificado satisfactoriamente.  Texto intoducido:  $texto_enlace  y url introducida: $url_enlace";
                                             
                       
                     
