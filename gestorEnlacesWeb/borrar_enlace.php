@@ -68,7 +68,7 @@
 						echo "<p class=\"mensaje\" >Enlace borrado de la base de datos. No existe ninguna asociación de este enlace con otra categoría";
 					}else{
 						
-						echo "<p class=\"mensaje\" >Asociación de este enlace, con la categoría seleccionada, borrada de la base de datos. Existe asociación de este enlace con otra categoría";
+						echo "<p class=\"mensaje\" >Borrada de la base de datos la asociación de este enlace con la categoría seleccionada. Existe asociación de este enlace con otra categoría";
 						
 					}
 	
