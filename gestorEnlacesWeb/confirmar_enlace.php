@@ -44,8 +44,8 @@
                     
                    		
 											
-					//$sql = "UPDATE  `enlace` SET  `url`=$url_enlace,`descripcion`=$texto_enlace WHERE `cod_enlace`=$id_enlace";
-					 mysqli_query($conexion, "UPDATE  `enlace` SET  `url`=$url_enlace,`descripcion`=$texto_enlace WHERE `cod_enlace`=$id_enlace") ;
+					$sql = "UPDATE  `enlace` SET  `url`=\"$url_enlace\",`descripcion`=\"$texto_enlace\" WHERE `cod_enlace`=$id_enlace";
+					$sqlUpdate = mysql_query($sql,$conexion ) or die(mysql_error());
 			
 														
                     echo "El enlace: $id_enlace, se ha modificado satisfactoriamente.  Texto intoducido:  $texto_enlace  y url introducida: $url_enlace";

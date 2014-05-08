@@ -125,7 +125,7 @@
 			var  menu= 	$("#navegador");
 				
 			//Vista inicial de la lista de enlaces 
-			var titulo_lista_enlaces="<h1>Lista de enlaces  -- Cambios realizados:</h1>";
+			var confirmar_enlace="<h1>Lista de enlaces  -- Cambios realizados:</h1>";
 			
 			
 			//Vista del menu de navegación
@@ -134,7 +134,34 @@
 	
 		
 				
-				tit.html(titulo_lista_enlaces);
+				tit.html(confirmar_enlace);
+				menu.html(menu_navegacion);
+		
+		
+		};
+	
+	
+		function borrar_enlace(){
+			
+			
+			//Inicialización de variables
+				
+			var  tit=  	$("#titulo");
+			var  menu= 	$("#navegador");
+			var  cont= 	$("#contenido");
+			var  menu= 	$("#navegador");
+				
+			//Vista inicial de la lista de enlaces 
+			var titulo_borrar_enlace="<h1>Lista de enlaces  -- Borrar enlace:</h1>";
+			
+			
+			//Vista del menu de navegación
+        	//Se utilizará en todas las vistas excepto en la portada inicial
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+	
+		
+				
+				tit.html(titulo_borrar_enlace);
 				menu.html(menu_navegacion);
 		
 		
