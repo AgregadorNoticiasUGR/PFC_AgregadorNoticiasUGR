@@ -41,6 +41,8 @@
                     $categ = $_POST["categoria"];
                     
                     echo "<h2>Categoria seleccionada: <em>$categ</em></h2></br>";
+					
+					
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
@@ -51,6 +53,10 @@
                     $resultado = mysql_query($sql, $conexion) or die('Consulta fallida: ' . mysql_error());
                     $row=mysql_fetch_array($resultado);
                     $id_categ=$row['cod_categoria'];
+					
+					
+					//Muestro el boton para pasar al formulario de nuevo enlace
+					echo	"<form action=\"nuevo_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"categoria_seleccionada\" value=$id_categ /><input  type=\"submit\" value=\"Nuevo\"  /></form>";
                     
                     
                     //Buscamos todos los enlaces relacionados con esta categoria

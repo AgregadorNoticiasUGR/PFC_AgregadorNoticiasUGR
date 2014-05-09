@@ -65,7 +65,7 @@
 						$sql3 = "DELETE FROM `enlace`  WHERE  `cod_enlace`=$id_enlace ";
 						mysql_query($sql3, $conexion)or die(mysql_error());
 						
-						echo "<p class=\"mensaje\" >Enlace borrado de la base de datos. No existe ninguna asociación de este enlace con otra categoría";
+						echo "<p class=\"mensaje\" >Enlace borrado de la base de datos. No existe ninguna asociación del enlace con otra categoría";
 					}else{
 						
 						echo "<p class=\"mensaje\" >Borrada de la base de datos la asociación de este enlace con la categoría seleccionada. Existe asociación de este enlace con otra categoría";
