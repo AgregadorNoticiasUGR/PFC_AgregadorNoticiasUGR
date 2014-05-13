@@ -93,12 +93,6 @@
 						}
 						
 						
-						
-						
-						
-						echo "El ide nuevo  del enlece es:   $id_nuevo_enlace";
-						
-						
 						//Introduzco en la tabla pertenece el codigo del enlace y de la cateogoría. 
 						$sql4 = "INSERT INTO pertenece( cod_categoria, cod_enlace) VALUES (\"$id_categ\",\"$id_nuevo_enlace\")";
 						mysql_query($sql4, $conexion)or die(mysql_error());
@@ -108,7 +102,7 @@
 						echo "<p class=\"mensaje\" >La URL y su descripción se han registrado en la categoría seleccionada satisfactoriamente.";
 					}else{
 						
-						echo "<p class=\"mensaje\" >Esta URL ya esta registrada en la misma categoria. No se efectuarán cambios en la base de datos.";
+						echo "<p class=\"mensaje\" >Esta URL ya está registrada en la misma categoría. No se efectuarán cambios en la base de datos.";
 						
 					}
                     

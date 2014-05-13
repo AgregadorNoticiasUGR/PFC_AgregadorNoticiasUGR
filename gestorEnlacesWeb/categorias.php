@@ -56,11 +56,12 @@
                     
                     if($totFilas==0){
                             
-                        echo "<h4>No se existe ninguna categor&iacute;a que mostrar.</h4>";
+                        echo "<h4>No se existe ninguna categoría que mostrar.</h4>";
                         
                     }
                     else{
-                        
+                        //Muestro el boton para pasar al formulario de nueva categoria
+					echo	"<form action=\"nueva_categoria.php\" method=\"post\"><input  type=\"submit\" value=\"Nueva\"  /></form>";
                                     
                         echo "<form action=\"enlaces.php\" method=\"post\" id=\"listado_categorias\">";
                         while ($row=mysql_fetch_array($resultado)) 
