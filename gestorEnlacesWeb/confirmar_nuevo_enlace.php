@@ -42,7 +42,6 @@
                     mysql_set_charset('utf8');
                     
                    		
-						
 					//Compruebo que no existe PREVIAMENTE en la BD esa url asociada	a esa categoría
 											
 					$sql = "SELECT * FROM enlace,pertenece WHERE pertenece.cod_categoria=$id_categ and enlace.url=\"$url_enlace\" and pertenece.cod_enlace= enlace.cod_enlace";
@@ -53,7 +52,7 @@
                     
                     $totFilas = mysql_num_rows($resultado);
                     
-                    
+					
                     
                     if($totFilas==0){
 					
@@ -61,7 +60,7 @@
 					
 						//Compruebo que no existe PREVIAMENTE en la BD esa url en la tabla enlace(asociada a otra categoria)
 											
-						$sql5 = "SELECT * FROM enlace WHERE enlace.url=\"$url_enlace\" ";
+						$sql5 = "SELECT * FROM enlace WHERE url=\"$url_enlace\" ";
 						
 						$resultado5 = mysql_query($sql5, $conexion)or die(mysql_error());
 						
@@ -72,18 +71,36 @@
 						
 						//Si no existia previamente ese enlace en la BD
 						if($totFilas2==0){
+							
+							
+							//Obtengo el código del enlace en la tabla `enlace `  
+						$sql3 =  "SELECT max(`cod_enlace`) AS `maximo` FROM `enlace` ";
+						$resultado3 = mysql_query($sql3, $conexion)or die(mysql_error());
+						
+						
+						$nuevo_enlace=mysql_fetch_array($resultado3);
+						
+						//Identificador del nuevo enlace
+						
+						$id_nuevo_enlace=$nuevo_enlace['maximo']+1  ;
+						
+						
+							
 							//Introduzco la información del enlace en la tabla enlace
-							$sql2 = "INSERT INTO `enlace`( `url`, `descripcion`) VALUES (\"$url_enlace\",\"$texto_enlace\" )";
+							$sql2 = "INSERT INTO enlace( cod_enlace, url, descripcion) VALUES ($id_nuevo_enlace,\"$url_enlace\",\"$texto_enlace\" )";
 							mysql_query($sql2, $conexion)or die(mysql_error());
 														
 						}
 						
-						//Obtengo el código del enlace en la tabla `enlace`
-						$sql3 = "SELECT cod_enlace FROM `enlace` WHERE `enlace.url`=\"$url_enlace\" ";
-						$resultado3 = mysql_query($sql3, $conexion)or die(mysql_error());
+						
+						
+						
+						
+						echo "El ide nuevo  del enlece es:   $id_nuevo_enlace";
+						
 						
 						//Introduzco en la tabla pertenece el codigo del enlace y de la cateogoría. 
-						$sql4 = "INSERT INTO `pertenece`( `cod_enlace`, `cod_categoria`) VALUES (\"$resultado3\",$id_categ)";
+						$sql4 = "INSERT INTO pertenece( cod_categoria, cod_enlace) VALUES (\"$id_categ\",\"$id_nuevo_enlace\")";
 						mysql_query($sql4, $conexion)or die(mysql_error());
 
 

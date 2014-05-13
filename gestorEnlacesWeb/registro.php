@@ -30,7 +30,7 @@
         if($totFilas!=1){
 				
 			echo "<h1>No se existe ningun usuario registrado con esos datos, compruebelos y vuelva a intentarlo.</h1>";
-			echo "<a href=\"index.html\" style=\"text-decoration:none\"><input type=\"button\" value=\"Reintentar\" >";
+			echo "<a href=\"index.php\" style=\"text-decoration:none\"><input type=\"button\" value=\"Reintentar\" >";
 			
         }
         else{
