@@ -13,7 +13,7 @@
 			
 			$(function(){
 					
-					listar_enlaces_editable();
+					confirmar_enlace();
 					
 			}); 
 
@@ -27,35 +27,26 @@
 
     <div id="contenedor">
     	<header id="titulo"></header>
-        <article id="contenido"> 
+        <article id="contenido">  
         
         
         <?php
                     
-                    $id_categ = $_POST["categoria_seleccionada"];
-					$id_enlace=$_POST["enlace_seleccionado"];
+                    $id_categ = $_POST["id_categoria"];
+					$nombre_categ=$_POST["nombre_editado"];
                     
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
                     mysql_set_charset('utf8');
                     
-                   							
-					$sql = "SELECT * FROM `enlace` WHERE `cod_enlace`=$id_enlace";
-					$resultado2 = mysql_query($sql, $conexion)or die(mysql_error());
-					$row=mysql_fetch_array($resultado2);
-					$texto_enlace=$row['descripcion'];
-					$url_enlace=$row['url'];
-	
-				
-					
-							
-									
-							
-					echo	"<form action=\"confirmar_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"id_categoria\" value=\"$id_categ\" /><input type=\"hidden\" name=\"id_enlace\" value=\"$id_enlace\" /> <div class=\"url\">Url:  <input type=\"text\" name=\"url_editado\" value=\"$url_enlace\" /></div><div class=\"descripcion\"> Descripción:  <input type=\"text\" name=\"descripcion_editado\" value=\"$texto_enlace\" /></div><input type=\"submit\" value=\"Guardar\" /></form>";		
-                           
+                   		
+											
+					$sql = "UPDATE  `categoria` SET  `nom_categoria`=\"$nombre_categ\" WHERE `cod_categoria`=$id_categ";
+					$sqlUpdate = mysql_query($sql,$conexion ) or die(mysql_error());
+			
 														
-                    
+                    echo "La categoría  se ha modificado satisfactoriamente.  Nombre intoducido:  $nombre_categ";
                                             
                       
                     

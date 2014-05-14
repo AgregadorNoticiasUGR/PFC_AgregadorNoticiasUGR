@@ -13,7 +13,7 @@
 			
 			$(function(){
 					
-					listar_enlaces_editable();
+					editar_categoria();
 					
 			}); 
 
@@ -33,7 +33,6 @@
         <?php
                     
                     $id_categ = $_POST["categoria_seleccionada"];
-					$id_enlace=$_POST["enlace_seleccionado"];
                     
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
@@ -41,18 +40,18 @@
                     mysql_set_charset('utf8');
                     
                    							
-					$sql = "SELECT * FROM `enlace` WHERE `cod_enlace`=$id_enlace";
+					$sql = "SELECT * FROM `categoria` WHERE `cod_categoria`=$id_categ";
 					$resultado2 = mysql_query($sql, $conexion)or die(mysql_error());
 					$row=mysql_fetch_array($resultado2);
-					$texto_enlace=$row['descripcion'];
-					$url_enlace=$row['url'];
+					$nombre_categoria=$row['nom_categoria'];
 	
 				
 					
 							
+                            
 									
 							
-					echo	"<form action=\"confirmar_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"id_categoria\" value=\"$id_categ\" /><input type=\"hidden\" name=\"id_enlace\" value=\"$id_enlace\" /> <div class=\"url\">Url:  <input type=\"text\" name=\"url_editado\" value=\"$url_enlace\" /></div><div class=\"descripcion\"> Descripción:  <input type=\"text\" name=\"descripcion_editado\" value=\"$texto_enlace\" /></div><input type=\"submit\" value=\"Guardar\" /></form>";		
+					echo	"<form action=\"confirmar_categoria.php\" method=\"post\"><input type=\"hidden\" name=\"id_categoria\" value=\"$id_categ\" /> <div class=\"nombre_categoria\">Nombre categoría:  <input type=\"text\" name=\"nombre_editado\" value=\"$nombre_categoria\" /></div><input type=\"submit\" value=\"Guardar\" /></form>";		
                            
 														
                     

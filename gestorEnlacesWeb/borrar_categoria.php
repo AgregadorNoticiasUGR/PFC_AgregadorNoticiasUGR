@@ -13,7 +13,7 @@
 			
 			$(function(){
 					
-					listar_enlaces_editable();
+					borrar_categoria();
 					
 			}); 
 
@@ -25,49 +25,58 @@
 
 <body>
 
-    <div id="contenedor">
+<div id="contenedor">
     	<header id="titulo"></header>
-        <article id="contenido"> 
+        <article id="contenido">
         
         
-        <?php
+        
+          <?php
                     
                     $id_categ = $_POST["categoria_seleccionada"];
-					$id_enlace=$_POST["enlace_seleccionado"];
                     
                     
                     $conexion = mysql_connect("127.0.0.1", "root", "") or die('No se pudo conectar: ' . mysql_error());
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
                     mysql_set_charset('utf8');
-                    
-                   							
-					$sql = "SELECT * FROM `enlace` WHERE `cod_enlace`=$id_enlace";
-					$resultado2 = mysql_query($sql, $conexion)or die(mysql_error());
-					$row=mysql_fetch_array($resultado2);
-					$texto_enlace=$row['descripcion'];
-					$url_enlace=$row['url'];
-	
-				
 					
-							
-									
-							
-					echo	"<form action=\"confirmar_enlace.php\" method=\"post\"><input type=\"hidden\" name=\"id_categoria\" value=\"$id_categ\" /><input type=\"hidden\" name=\"id_enlace\" value=\"$id_enlace\" /> <div class=\"url\">Url:  <input type=\"text\" name=\"url_editado\" value=\"$url_enlace\" /></div><div class=\"descripcion\"> Descripción:  <input type=\"text\" name=\"descripcion_editado\" value=\"$texto_enlace\" /></div><input type=\"submit\" value=\"Guardar\" /></form>";		
-                           
-														
+					
+
+
+
                     
-                                            
-                      
+					
+					
+					$sql2 = "SELECT * FROM `pertenece` WHERE `cod_categoria`=$id_categ";
+                    $resultado2 = mysql_query($sql2, $conexion)or die(mysql_error());
+                    
+                  
+                    
+                    
+                    $totFilas = mysql_num_rows($resultado2);
+                    
+                    
+                    
+                    if($totFilas==0){
+						$sql3 = "DELETE FROM `categoria`  WHERE  `cod_categoria`=$id_categ ";
+						mysql_query($sql3, $conexion)or die(mysql_error());
+						
+						echo "<p class=\"mensaje\" >Categoria borrada satisfactoriamente. No existía ningun enlace asociado a esta categoria.";
+					}else{
+						
+						echo "<p class=\"mensaje\" >No se pudo borrar la categoria seleccionada. Compruebe que no existen enlaces asociados a esta categoría";
+						
+					}
+	
+			
                     
                     // Cerrar la conexión
                     mysql_close($conexion);
                     
                 ?> 
-        
         </article>
         <nav id="navegador"></nav>
         <footer id="piePagina"></footer>
     </div>
-
 </body>
 </html>

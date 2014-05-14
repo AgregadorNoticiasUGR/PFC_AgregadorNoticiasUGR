@@ -48,7 +48,7 @@
 					$sqlUpdate = mysql_query($sql,$conexion ) or die(mysql_error());
 			
 														
-                    echo "El enlace: $id_enlace, se ha modificado satisfactoriamente.  Texto intoducido:  $texto_enlace  y url introducida: $url_enlace";
+                    echo "El enlace se ha modificado satisfactoriamente.  Texto intoducido:  $texto_enlace  y url introducida: $url_enlace";
                                             
                       
                     

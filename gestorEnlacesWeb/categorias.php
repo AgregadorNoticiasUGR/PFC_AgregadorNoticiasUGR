@@ -26,6 +26,13 @@
 </script>
 
 
+<script language="JavaScript">
+	function confirmar ( mensaje ) {
+		return confirm( mensaje );
+	}
+</script>
+
+
 </head>
 
 
@@ -63,14 +70,21 @@
                         //Muestro el boton para pasar al formulario de nueva categoria
 					echo	"<form action=\"nueva_categoria.php\" method=\"post\"><input  type=\"submit\" value=\"Nueva\"  /></form>";
                                     
-                        echo "<form action=\"enlaces.php\" method=\"post\" id=\"listado_categorias\">";
                         while ($row=mysql_fetch_array($resultado)) 
                         {	
+							$id_categ=$row['cod_categoria'];
+							$nombre=$row['nom_categoria'];
+							
                         
-                            echo '<div class="elemento_lista"><input type="submit" value= "'.$row['nom_categoria'].'" name= "categoria"></div> ';
+                        	echo "<form action=\"enlaces.php\" method=\"post\" id=\"listado_categorias\"><div class=\"elemento_lista\">$nombre</div><input type=\"hidden\" name=\"id_categoria\" value=$id_categ /><input type=\"hidden\" name=\"nombre_categoria\" value=$nombre /><input type=\"submit\" value=\"Ver enlaces\" name= \"categoria\"></form>";
+						
+						
+							// Demás opciones: editar y borrar
+							echo	"<form action=\"editar_categoria.php\" method=\"post\"><input type=\"hidden\" name=\"categoria_seleccionada\" value=$id_categ /><input type=\"submit\" value=\"Editar\" /></form>";
+							
+							echo	"<form action=\"borrar_categoria.php\" method=\"post\" onsubmit=\"return confirmar('¿Seguro que desea eliminar la categoria: $nombre ?')\"><input type=\"hidden\" name=\"categoria_seleccionada\" value=$id_categ /><input type=\"submit\" value=\"Borrar\" /></form>";
                         }
                         
-                        echo "</form>";
                     }
             
                     
