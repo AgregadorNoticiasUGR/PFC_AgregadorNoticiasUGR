@@ -49,11 +49,7 @@
                     mysql_select_db("enlaces_ugr_db", $conexion) or die('No se pudo seleccionar la base de datos');
                     mysql_set_charset('utf8');
                     
-                   // //Sacamos el codigo de la categoria seleccionada
-//                    $sql = "SELECT `cod_categoria` FROM `categoria` WHERE `nom_categoria`=\"$categ\"";
-//                    $resultado = mysql_query($sql, $conexion) or die('Consulta fallida: ' . mysql_error());
-//                    $row=mysql_fetch_array($resultado);
-//                    $id_categ=$row['cod_categoria'];
+                
 					
 					
 					//Muestro el boton para pasar al formulario de nuevo enlace

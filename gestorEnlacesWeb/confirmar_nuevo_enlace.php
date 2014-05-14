@@ -72,17 +72,17 @@
 						//Si no existia previamente ese enlace en la BD
 						if($totFilas2==0){
 							
-							
+								
 							//Obtengo el código del enlace en la tabla `enlace `  
-						$sql3 =  "SELECT max(`cod_enlace`) AS `maximo` FROM `enlace` ";
-						$resultado3 = mysql_query($sql3, $conexion)or die(mysql_error());
-						
-						
-						$nuevo_enlace=mysql_fetch_array($resultado3);
-						
-						//Identificador del nuevo enlace
-						
-						$id_nuevo_enlace=$nuevo_enlace['maximo']+1  ;
+							$sql3 =  "SELECT max(`cod_enlace`) AS `maximo` FROM `enlace` ";
+							$resultado3 = mysql_query($sql3, $conexion)or die(mysql_error());
+							
+							
+							$nuevo_enlace=mysql_fetch_array($resultado3);
+							
+							//Identificador del nuevo enlace
+							
+							$id_nuevo_enlace=$nuevo_enlace['maximo']+1  ;
 						
 						
 							
@@ -91,6 +91,15 @@
 							mysql_query($sql2, $conexion)or die(mysql_error());
 														
 						}
+						else{
+								//Obtengo el código del enlace YA EXISTENTE DE la tabla `enlace `  
+									echo "Entro en caso redundante----------------------------";
+								
+								
+								$salida=mysql_fetch_array($resultado5);
+								$id_nuevo_enlace=$salida['cod_enlace'];
+								echo "Entro en caso redundante----------------------------$id_nuevo_enlace";
+							}
 						
 						
 						//Introduzco en la tabla pertenece el codigo del enlace y de la cateogoría. 
