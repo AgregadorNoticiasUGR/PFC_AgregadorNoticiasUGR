@@ -1,0 +1,70 @@
+<html>
+<head>
+<script src="jquery-1.10.2.min.js"></script>
+</head>
+
+<script type="text/javascript">
+$(document).ready(function (){
+    $("#boton1").click(function(){
+        $.ajaxSetup({ cache: false });
+
+        $.getJSON("http://mercurio.ugr.es/pedro/docencia/irhc/ej_json/uno_ajax.json", function(data){ 
+            var html = [];
+
+            $.each(data, function(index, d){            
+                html.push("fabricante : ", d.Manufacturer, ", ",
+                          "vendidos : ", d.Sold, ", ", 
+                          "mes : ", d.Month, "<br>");
+            });
+
+            $("#resultado").html(html.join('')).css("background-color", "orange");
+            
+        }).error(function(jqXHR, textStatus, errorThrown){
+            alert("un error");
+        });
+        
+    });
+    
+    
+    $("#boton2").click(function(){
+        $.ajaxSetup({ cache: false });
+
+        $.getJSON("http://mercurio.ugr.es/pedro/docencia/irhc/ej_json/uno_json.php", function(data){ 
+            var html = [];
+
+            $.each(data, function(index, d){            
+                html.push("marca : ", d.Manufacturer, ", ",
+                          "cuantos : ", d.Sold, ", ", 
+                          "mes : ", d.Month, "<br>");
+            });
+
+            $("#resultado").html(html.join('')).css("background-color", "cyan");
+            
+        }).error(function(jqXHR, textStatus, errorThrown){
+            alert("un error");
+        });
+        
+    });
+
+
+    $("#boton3").click(function(){
+	    $("#resultado").html("");
+    });    
+});
+</script>
+
+
+<body>
+
+    <div id="resultado"></div>
+    <BR>
+    <button id="boton1" type="button">pedir un archivo json directamente</button>
+    <BR>
+    <button id="boton2" type="button">pedir un archivo json a un PHP</button>
+    <BR>
+    <button id="boton3" type="button">limpiar</button>
+    <BR>
+    
+    
+</body>
+</html>

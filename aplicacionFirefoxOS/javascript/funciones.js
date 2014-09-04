@@ -5,6 +5,8 @@
 
 
 
+
+
 	//Función que añade más subscripciones a la lista de  categorías a las que ya se encuentra subscrito
 	//
 	//
@@ -138,45 +140,72 @@
 	
 	
 	
-	function ajax(){
-		$.ajax({
-
-							 url : 'http://localhost/PFCAgregadorNoticiasUGR/gestorEnlacesWeb/actualizar.php',
-							 
-  dataType : 'jsonp',
-  data : data
-});
+		function ajax(){
+		/*			
+			$.ajax({
+				url: "127.0.0.1/PFCAgregadorNoticiasUGR/gestorEnlacesWeb/actualizar.php" ,
+				data: {},
+				success: function( data ) {
+					alert("resultado po a saber" );
+				}
+			});
+			
+		*/
 		
 		}
+		
+		
+		
+
+
+
+
+
+		function mostrar(){
+			consultar('http://localhost/PFCAgregadorNoticiasUGR/gestorEnlacesWeb/actualizar.php');
+		}
+		
+		
+		
+		
+		
+		function contactWebServer(url) {
+					var xhr = new XMLHttpRequest({mozSystem: true});
+					xhr.open("GET", url, true);
+					xhr.onreadystatechange = function() {
+					  if (xhr.readyState == 4) {
+							var tmpkk = xhr.responseText;
+							mostrarResultado(tmpkk);
+					  }
+					}
+					xhr.send();
+		}
+		function consultar(direccion){
+			/*var tmpElem = document.getElementById('tablaExtraida');
+			while (tmpElem.firstChild) { tmpElem.removeChild(tmpElem.firstChild); }
+			
+			var tmpElem2 = document.createElement('center');
+			var tmpIMG = document.createElement('img');
+			tmpIMG.setAttribute('src','loadergris.gif');
+			var tmpText = document.createTextNode('Bajando la información del servidor.');
+			tmpElem2.appendChild(tmpText);
+			tmpElem2.appendChild(document.createElement('br'));
+			tmpElem2.appendChild(tmpIMG);
+			tmpElem.appendChild(tmpElem2);*/
+			
+			contactWebServer(direccion);	
+		}
+		
+		function mostrarResultado(cad){
+		
+		}
+
+		
+		
 	
 	
 	function borrar_subscripciones(){
 		
 		
-		//var  cont= 	$("#contenido");
-//		var algo;
-//		
-//		
-//			var nom_categoria='Facultades';
-//			var id_categoria=1;
-//			var nom_categoria2='Otra';
-//			var id_categoria2=2;
-//			var lista_elementos=[];
-//			lista_elementos.push(nom_categoria);
-//			lista_elementos.push(id_categoria);
-//			lista_elementos.push(nom_categoria2);
-//			lista_elementos.push(id_categoria2);
-//			localStorage.lista_categorias_json=JSON.stringify(lista_elementos);
-//			lista_aux=[localStorage.lista_categorias_json];
-//		
-//		
-//		
-//			
-//			cont.html(lista_aux.pop());
-//		
-		
-localStorage.clear();
-
-
-		
-		}
+			localStorage.clear();
+	}

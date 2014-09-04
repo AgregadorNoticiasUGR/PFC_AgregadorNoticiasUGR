@@ -19,7 +19,7 @@
 				
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"index.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li id=\"opciones\"  class=\"separador\"><a href=\"#\" ><img src=\"opciones-icono.png\" title=\"Menú\"></a><ul><li class=\"nuevo\"><a href=\"nuevo_categoria.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_categoria.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"index.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
            
 		        
 			//Vista inicial de la lista de categorias 
@@ -75,7 +75,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -102,7 +102,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -130,7 +130,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -157,7 +157,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -185,7 +185,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -212,7 +212,7 @@
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -240,7 +240,7 @@ function formulario_nueva_categoria(){
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -267,7 +267,7 @@ function guardar_nueva_categoria(){
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -294,7 +294,7 @@ function guardar_nueva_categoria(){
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
@@ -321,7 +321,7 @@ function guardar_nueva_categoria(){
 			
 			//Vista del menu de navegación
         	//Se utilizará en todas las vistas excepto en la portada inicial
-        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li><li class=\"separador\"><a href=\"#\" id=\"opciones\" title=\"Menú\"><img src=\"opciones-icono.png\" ></a><ul><li class=\"nuevo\"> <a href=\"nuevo_enlace.php\">Nuevo</a></li><li class=\"editar\"> <a href=\"editar_enlace.php\">Editar</a></li></ul></li></ul></div>";
+        	var menu_navegacion="<div id=\"estilo_navegador\"><ul><li class=\"separador\"><a href=\"categorias.php\" id=\"atras\" title=\"Atrás\"><img src=\"atras-icono.png\"></a></li><li class=\"separador\"><a href=\"index.php\" id=\"desconexion\" title=\"Desconectar\"><img src=\"desconexion-icono.png\"></a></li></ul></div>";
 	
 		
 				
