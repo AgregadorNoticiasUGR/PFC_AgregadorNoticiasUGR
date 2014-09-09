@@ -140,19 +140,24 @@
 	
 	
 	
-		function ajax(){
-		/*			
-			$.ajax({
-				url: "127.0.0.1/PFCAgregadorNoticiasUGR/gestorEnlacesWeb/actualizar.php" ,
-				data: {},
-				success: function( data ) {
-					alert("resultado po a saber" );
-				}
-			});
+	
+			 	$("#boton1").click(function(){
+					$.ajaxSetup({ cache: false });
 			
-		*/
+					$.getJSON("http://localhost/PFCAgregadorNoticiasUGR/gestorEnlacesWeb/actualizar.php", function ajax_servidor(data){ 
+						
+			
+					
+			
+						$("#resultado").html(data);
+						
+					}).error(function(jqXHR, textStatus, errorThrown){
+						alert("un error");
+					});
+				
+    			});
 		
-		}
+		
 		
 		
 		

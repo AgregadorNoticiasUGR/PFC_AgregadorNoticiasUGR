@@ -26,8 +26,8 @@ $(function(){
     //	var post = $.post("http://servidor.php", parametros, siRespuesta, 'json');
   		$.ajaxSetup({ cache: false });
 
-        $.postJSON("servidor.php", function (parametros){ 
-            siRespuesta(parametros);
+        $.postJSON("http://localhost/PFCAgregadorNoticiasUGR/ajax/suma/servidor.php", function (data){ 
+            siRespuesta(data);
 
            
             
@@ -36,5 +36,29 @@ $(function(){
         });
     }
  
-    $('#botonCalcular').click(peticion); // Registrar evento al boton "Calcular" con la funcion "peticion"
+    $('#botonCalcular').click(function(){
+        $.ajaxSetup({ cache: false });
+
+		var parametros = {
+            variable1: $('#text1').val(),
+            variable2: $('#text2').val()
+    	};
+
+        $.getJSON("http://localhost/PFCAgregadorNoticiasUGR/ajax/suma/servidor.php", function(parametros){ 
+            var html = [];
+
+            // Crear HTML con las respuestas del servidor
+        var rHtml = 'El resultado de la suma es: ' + parametros.suma + '<br/>';
+            rHtml += 'El resultado del producto es: ' + parametros.producto;
+ 
+        $('#respuesta').html(rHtml);   // Mostrar la respuesta del servidor en el div con el id "respuesta"
+            
+        }).error(function(jqXHR, textStatus, errorThrown){
+            alert("un error");
+        });
+        
+    });
+	
+	
+	
 });

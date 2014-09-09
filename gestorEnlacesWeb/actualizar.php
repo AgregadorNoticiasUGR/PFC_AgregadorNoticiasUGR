@@ -5,7 +5,7 @@
 <title>Refrescar noticias</title>
 </head>
 <?php
-$arr = array('a' => 1, 'b' => 2, 'c' => 3, 'd' => 4);
+$arr = "algo y algo mas";
 echo json_encode($arr);
 ?>
 <body>
